@@ -21,43 +21,34 @@ public class MainActivity extends AppCompatActivity {
         Button pound_btn = findViewById(R.id.pound);
 
         TextView result = findViewById(R.id.result);
-        String value = input.getText().toString();
-        int input_value = Integer.parseInt(value);
+
+        if(input != null) {
+            String value = input.getText().toString();
+            int input_value = Integer.parseInt(value);
+
 
         dollar_btn.setOnClickListener(new View.OnClickListener() {
-                                          @Override
-                                          public void onClick(View view) {
-                                              int val = input_value * 126;
-                                              result.setText(val);
-                                          }
-                                      });
-//        if(input != null) {
-//            String value = input.getText().toString();
-//            int input_value = Integer.parseInt(value);
+            @Override
+            public void onClick(View view) {
+                int val = input_value * 126;
+                result.setText( val);
+            }
+        });
+        euro_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int val = input_value * 140;
+                result.setText( val);
+            }
+        });
+        pound_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int val = input_value * 140;
+                result.setText( val);
+            }
+        });
 
-//
-//        dollar_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int val = input_value * 126;
-//                result.setText( val);
-//            }
-//        });
-//        euro_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int val = input_value * 140;
-//                result.setText( val);
-//            }
-//        });
-//        pound_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int val = input_value * 140;
-//                result.setText( val);
-//            }
-//        });
-//
-    }
+    }}
 
 }
